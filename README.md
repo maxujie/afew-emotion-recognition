@@ -24,7 +24,7 @@ EmotiW 也就是这个比赛的名字。
 
 ## Schedule
 
-| DDL | State |
+| Time | Stage |
 |:---: | :---: |
 | 10.22~10.30 | 初步调研，阅读往年 paper，找各模块的相关比赛和 model |
 | 10.31~11.06 | 测试找到的模块的效果、熟悉 Caffe + Matlab 的使用、设计整体系统结构（特征提取+分类器的组织方式）、设计 Data Augmentation 的方式 |
