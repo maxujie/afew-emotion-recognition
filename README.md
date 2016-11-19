@@ -12,21 +12,27 @@ EmotiW 也就是这个比赛的名字。
 
 ## Face Detection
 
-（待完成）
+（如果时间允许的话）对视频的每一帧做人脸检测，确定画面中人脸的位置和倾角。
 
 ## Facial Emotion Recognition
 
-（待完成）
+从视频中取出 n 个人脸，用情感分类器识别人脸的情感，得到一个（可能是）7*n 维的 softmax 概率向量。
+
+暂定用 VGG 模型在 FER-2013 数据集上做一次 finetune ，可能需要再用 SFEW 的数据做一次 finetune。
 
 ## Speech Emotion Recognition
 
-（待完成）
+尝试用 OpenSMILE 和（或） Yaafe 或其他库提取音频的特征。
+
+可能需要对音频进行分段，然后分别对每一段提取特征。
 
 ## Classifier
 
-（待完成）
+用以上得到的特征（大约 100 维？）train 一个 SVM 或者 PLS 分类器。由于 MATLAB 貌似已经有现成的函数了，所以直接用 MATLAB 应该就可以。
 
-## Schedule
+需要注意的是特征的维度可能有点高，在直接做 SVM 或者 PLS 的性能不好的情况下，可能需要用 LSA 先做降维。
+
+## Schedule (Old)
 
 | Time | Stage |
 |:---: | :---: |
