@@ -4,26 +4,20 @@ function feature = featureExtract(video, audio)
 
 [faces_all, frames] = faceDetector(video);
 
-%% ÓÃÄ³ÖÖ·½·¨Ñ¡È¡¹Ì¶¨ÊıÁ¿µÄÈËÁ³
+%% ç”¨æŸç§æ–¹æ³•é€‰å–å›ºå®šæ•°é‡çš„äººè„¸
 
 face_num = 10;
 faces = faces_all{1:face_num};
 
-%% ÌáÈ¡ÈËÁ³Çé¸ĞÌØÕ÷
+%% æå–äººè„¸æƒ…æ„Ÿç‰¹å¾
 
-face_feature_size = 7;
-face_emotion_feature = zeros(face_feature_size, face_num);
+face_emotion_feature = faceEmotion(faces);
 
-for i = 1:face_num
-    face_emotion_feature(:, i) = faceEmotion(faces{i});
-end
-
-%% ÌáÈ¡ÉùÒôÌØÕ÷
+%% æå–å£°éŸ³ç‰¹å¾
 
 audio_feature = audioFeature(audio);
 
-%% È»ºó°ÑËüÃÇÆ´ÆğÀ´
+%% ç„¶åæŠŠå®ƒä»¬æ‹¼èµ·æ¥
 feature = [face_emotion_feature(:); audio_feature];
 
 end
-
