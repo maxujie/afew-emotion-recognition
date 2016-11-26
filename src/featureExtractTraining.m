@@ -1,14 +1,15 @@
-function feature = featureExtract(video, audio)
+function feature = featureExtractTraining(video, audio)
 
 %% Face Detection
 
 [faces_all, frames] = faceDetector(video);
 
+
 %% 用某种方法选取固定数量的人脸
 
 face_num = 10;
-ind = linspace(1, length(faces_all), face_num);
-ind = int32(ind);  % uniformly choose faces
+ind_tmp = int32(rand(1, 10) * length(faces_all) + 0.5);
+ind = sort(ind_tmp);
 faces = faces_all(1, ind);
 
 %% 提取人脸情感特征
