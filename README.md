@@ -8,6 +8,8 @@ Project for Course _Introduction to Auditory-visual Information System_ in Tsing
 
 ## System Structure
 
-## Result
+![](./report/structure.png)
 
 ## Report
+
+[Report](./report/afew.pdf)
