@@ -12,4 +12,4 @@ Project for Course _Introduction to Auditory-visual Information System_ in Tsing
 
 ## Report
 
-[Report](./report/afew.pdf)
+[Report (pdf)](./report/afew.pdf)
